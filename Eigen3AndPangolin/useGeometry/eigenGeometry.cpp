@@ -8,7 +8,7 @@ using namespace std;
 
 using namespace Eigen;
 
-// 本程序演示了 Eigen 几何模块的使用方法
+// This program demonstrates the usage of Eigen's geometry module.
 
 int main(int argc, char **argv) {
 
