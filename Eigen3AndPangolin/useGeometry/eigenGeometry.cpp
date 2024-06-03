@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
   // 3D rotation matrices can be directly represented using Matrix3d or Matrix3f.
   Matrix3d rotation_matrix = Matrix3d::Identity();
   
-ChatGPT
+
 // Rotation vectors use AngleAxis. It is not directly a Matrix at its core, but operations 
 // can be treated as matrices (since operators are overloaded).
   AngleAxisd rotation_vector(M_PI / 4, Vector3d(0, 0, 1)); // Rotate 45 degrees around the Z axis.
@@ -54,7 +54,7 @@ ChatGPT
   Quaterniond q = Quaterniond(rotation_vector);
   cout << "quaternion from rotation vector = " << q.coeffs().transpose()
        << endl;   // Please note that the order of coeffs is (x, y, z, w), where w is the real part and the first three are the imaginary parts.
-// Rotation matrices can also be assigned to it.
+  // Rotation matrices can also be assigned to it.
   q = Quaterniond(rotation_matrix);
   cout << "quaternion from rotation matrix = " << q.coeffs().transpose() << endl;
   
