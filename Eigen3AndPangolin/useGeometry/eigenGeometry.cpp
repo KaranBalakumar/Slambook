@@ -12,51 +12,57 @@ using namespace Eigen;
 
 int main(int argc, char **argv) {
 
-  // Eigen/Geometry 模块提供了各种旋转和平移的表示
-  // 3D 旋转矩阵直接使用 Matrix3d 或 Matrix3f
+  // Eigen/Geometry The module provides representations for various rotations and translations.
+  // 3D rotation matrices can be directly represented using Matrix3d or Matrix3f.
   Matrix3d rotation_matrix = Matrix3d::Identity();
-  // 旋转向量使用 AngleAxis, 它底层不直接是Matrix，但运算可以当作矩阵（因为重载了运算符）
-  AngleAxisd rotation_vector(M_PI / 4, Vector3d(0, 0, 1));     //沿 Z 轴旋转 45 度
+  
+ChatGPT
+// Rotation vectors use AngleAxis. It is not directly a Matrix at its core, but operations 
+// can be treated as matrices (since operators are overloaded).
+  AngleAxisd rotation_vector(M_PI / 4, Vector3d(0, 0, 1)); // Rotate 45 degrees around the Z axis.
   cout.precision(3);
-  cout << "rotation matrix =\n" << rotation_vector.matrix() << endl;   //用matrix()转换成矩阵
-  // 也可以直接赋值
+  cout << "rotation matrix =\n" << rotation_vector.matrix() << endl; // Convert to matrix using matrix() function.
+  // It can also be directly assigned.
   rotation_matrix = rotation_vector.toRotationMatrix();
-  // 用 AngleAxis 可以进行坐标变换
+  // Coordinate transformations can be performed using AngleAxis.
   Vector3d v(1, 0, 0);
   Vector3d v_rotated = rotation_vector * v;
   cout << "(1,0,0) after rotation (by angle axis) = " << v_rotated.transpose() << endl;
-  // 或者用旋转矩阵
+  // Alternatively, rotation matrices can be used.
   v_rotated = rotation_matrix * v;
   cout << "(1,0,0) after rotation (by matrix) = " << v_rotated.transpose() << endl;
 
-  // 欧拉角: 可以将旋转矩阵直接转换成欧拉角
-  Vector3d euler_angles = rotation_matrix.eulerAngles(2, 1, 0); // ZYX顺序，即yaw-pitch-roll顺序
+  // Euler angles: Rotation matrices can be directly converted to Euler angles.
+  Vector3d euler_angles = rotation_matrix.eulerAngles(2, 1, 0); // ZYX order, i.e., yaw-pitch-roll order.
   cout << "yaw pitch roll = " << euler_angles.transpose() << endl;
 
-  // 欧氏变换矩阵使用 Eigen::Isometry
-  Isometry3d T = Isometry3d::Identity();                // 虽然称为3d，实质上是4＊4的矩阵
-  T.rotate(rotation_vector);                                     // 按照rotation_vector进行旋转
-  T.pretranslate(Vector3d(1, 3, 4));                     // 把平移向量设成(1,3,4)
+  // Euclidean transformation matrices use Eigen::Isometry.
+  Isometry3d T = Isometry3d::Identity(); // Although named 3D, it is essentially a 4x4 matrix.              
+  T.rotate(rotation_vector); // Rotate according to the rotation_vector.
+  T.pretranslate(Vector3d(1, 3, 4)); // Set the translation vector to (1, 3, 4).
   cout << "Transform matrix = \n" << T.matrix() << endl;
 
-  // 用变换矩阵进行坐标变换
-  Vector3d v_transformed = T * v;                              // 相当于R*v+t
+  // Perform coordinate transformation using the transformation matrix.
+  Vector3d v_transformed = T * v; // Equivalent to R*v + t.
   cout << "v tranformed = " << v_transformed.transpose() << endl;
 
-  // 对于仿射和射影变换，使用 Eigen::Affine3d 和 Eigen::Projective3d 即可，略
+  // For affine and projective transformations, use Eigen::Affine3d and Eigen::Projective3d respectively.
 
-  // 四元数
-  // 可以直接把AngleAxis赋值给四元数，反之亦然
+  // Quaternions
+  // AngleAxis can be directly assigned to quaternions, and vice versa.
+
   Quaterniond q = Quaterniond(rotation_vector);
   cout << "quaternion from rotation vector = " << q.coeffs().transpose()
-       << endl;   // 请注意coeffs的顺序是(x,y,z,w),w为实部，前三者为虚部
-  // 也可以把旋转矩阵赋给它
+       << endl;   // Please note that the order of coeffs is (x, y, z, w), where w is the real part and the first three are the imaginary parts.
+// Rotation matrices can also be assigned to it.
   q = Quaterniond(rotation_matrix);
   cout << "quaternion from rotation matrix = " << q.coeffs().transpose() << endl;
-  // 使用四元数旋转一个向量，使用重载的乘法即可
-  v_rotated = q * v; // 注意数学上是qvq^{-1}
+  
+  // Rotate a vector using a quaternion, simply using overloaded multiplication.
+  v_rotated = q * v; // Note that mathematically it is qvq^{-1}.
   cout << "(1,0,0) after rotation = " << v_rotated.transpose() << endl;
-  // 用常规向量乘法表示，则应该如下计算
+  // If expressed using conventional vector multiplication, it should be calculated as follows:
+  // v_rotated = q * v * q.conjugate();
   cout << "should be equal to " << (q * Quaterniond(0, 1, 0, 0) * q.inverse()).coeffs().transpose() << endl;
 
   return 0;
