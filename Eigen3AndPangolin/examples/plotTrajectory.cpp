@@ -1,7 +1,6 @@
 #include <pangolin/pangolin.h>
 #include <Eigen/Core>
 #include <unistd.h>
-#include "sophus/se3.hpp"
 
 using namespace std;
 using namespace Eigen;
