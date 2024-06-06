@@ -7,7 +7,7 @@ Find the Epoxy (*libepoxy*) headers and library.
 Imported Targets
 ^^^^^^^^^^^^^^^^
 
-``Epoxy::Epoxy``
+``epoxy::epoxy``
   The Epoxy library, if found.
 
 Result Variables
