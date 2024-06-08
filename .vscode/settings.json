@@ -1,9 +1,10 @@
 {
-    "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
         "geometry": "cpp",
         "core": "cpp",
         "iostream": "cpp",
-        "new": "cpp"
-    }
+        "new": "cpp",
+        "chrono": "cpp",
+        "vector": "cpp"
+    },
 }
