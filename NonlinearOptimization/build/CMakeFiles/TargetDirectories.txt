@@ -1,0 +1,5 @@
+/home/karan/slambook/NonlinearOptimization/build/CMakeFiles/gaussNewton.dir
+/home/karan/slambook/NonlinearOptimization/build/CMakeFiles/ceresCurveFitting.dir
+/home/karan/slambook/NonlinearOptimization/build/CMakeFiles/g2oCurveFitting.dir
+/home/karan/slambook/NonlinearOptimization/build/CMakeFiles/edit_cache.dir
+/home/karan/slambook/NonlinearOptimization/build/CMakeFiles/rebuild_cache.dir
