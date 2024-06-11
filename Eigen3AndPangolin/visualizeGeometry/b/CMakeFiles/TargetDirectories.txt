@@ -1,3 +1,0 @@
-/home/karan/slambook/Eigen3AndPangolin/visualizeGeometry/b/CMakeFiles/visualizeGeometry.dir
-/home/karan/slambook/Eigen3AndPangolin/visualizeGeometry/b/CMakeFiles/edit_cache.dir
-/home/karan/slambook/Eigen3AndPangolin/visualizeGeometry/b/CMakeFiles/rebuild_cache.dir

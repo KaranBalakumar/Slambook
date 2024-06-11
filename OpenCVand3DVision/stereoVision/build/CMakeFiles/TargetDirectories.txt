@@ -1,3 +1,0 @@
-/home/karan/slambook/OpenCVand3DVision/stereoVision/build/CMakeFiles/stereoVision.dir
-/home/karan/slambook/OpenCVand3DVision/stereoVision/build/CMakeFiles/edit_cache.dir
-/home/karan/slambook/OpenCVand3DVision/stereoVision/build/CMakeFiles/rebuild_cache.dir

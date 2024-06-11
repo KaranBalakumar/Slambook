@@ -1,3 +1,0 @@
-/home/karan/slambook/Sophus_LieGroups/b/CMakeFiles/useSophus.dir
-/home/karan/slambook/Sophus_LieGroups/b/CMakeFiles/edit_cache.dir
-/home/karan/slambook/Sophus_LieGroups/b/CMakeFiles/rebuild_cache.dir

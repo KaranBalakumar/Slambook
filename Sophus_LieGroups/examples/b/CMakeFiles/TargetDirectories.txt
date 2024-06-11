@@ -1,3 +1,0 @@
-/home/karan/slambook/Sophus_LieGroups/examples/b/CMakeFiles/trajectoryError.dir
-/home/karan/slambook/Sophus_LieGroups/examples/b/CMakeFiles/edit_cache.dir
-/home/karan/slambook/Sophus_LieGroups/examples/b/CMakeFiles/rebuild_cache.dir

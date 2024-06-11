@@ -1,4 +1,0 @@
-/home/karan/slambook/OpenCVand3DVision/imageBasics/b/CMakeFiles/imageBasics.dir
-/home/karan/slambook/OpenCVand3DVision/imageBasics/b/CMakeFiles/undistortImage.dir
-/home/karan/slambook/OpenCVand3DVision/imageBasics/b/CMakeFiles/edit_cache.dir
-/home/karan/slambook/OpenCVand3DVision/imageBasics/b/CMakeFiles/rebuild_cache.dir

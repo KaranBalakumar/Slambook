@@ -1,4 +1,0 @@
-/home/karan/slambook/Eigen3AndPangolin/examples/build/CMakeFiles/coordinateTransform.dir
-/home/karan/slambook/Eigen3AndPangolin/examples/build/CMakeFiles/plotTrajectory.dir
-/home/karan/slambook/Eigen3AndPangolin/examples/build/CMakeFiles/edit_cache.dir
-/home/karan/slambook/Eigen3AndPangolin/examples/build/CMakeFiles/rebuild_cache.dir
