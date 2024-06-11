@@ -5,3 +5,4 @@ This repository contains basics and implementations required for Visual Odometry
 - Simple 3D Trajectory plotter using ```Eigen3``` and ```Pangolin```.
 - Display camera's Rotation matrix, Euler Angles, Translation vector and Quaternion visualizer.
 - Intro to OpenCV and mapping point clouds from stereo and RGBD camera images.
+- Examples of employing Ceres,g2o libraries for non linear optimization through curve fitting.
