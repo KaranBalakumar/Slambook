@@ -8,3 +8,4 @@ This repository contains basics and implementations required for Visual Odometry
 - Examples of employing ```Ceres```, ```g2o``` libraries for non linear optimization through curve fitting.
 - ```ORB feature``` extraction using ```OpenCV``` and another **ORB feautre extraction from scratch** for a particular **ORB pattern**
 - ```Pose estimation of Camera``` using **Essential and Fundamental Matrix** and then decompose **E** to find **R** and **t**, those whole program is solved using algorithms provided by ```OpenCV```.
+- Estimating keypoints depth by ```triangulation``` in ```OpenCV```. 
