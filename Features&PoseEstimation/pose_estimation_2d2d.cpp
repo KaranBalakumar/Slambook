@@ -15,9 +15,9 @@ void find_feature_matches(
 );
 
 void pose_estimation_2d2d(
-    vector<KeyPoint> keypoints_1,
-    vector<KeyPoint> keypoints_2,
-    vector<DMatch> matches,
+    vector<KeyPoint> &keypoints_1,
+    vector<KeyPoint> &keypoints_2,
+    vector<DMatch> &matches,
     Mat &R, Mat &t
 );
 
@@ -103,9 +103,9 @@ void find_feature_matches(const Mat &img_1, const Mat &img_2,
     }
 }
 
-void pose_estimation_2d2d(vector<KeyPoint> keypoints_1,
-                          vector<KeyPoint> keypoints_2,
-                          vector<DMatch> matches,
+void pose_estimation_2d2d(vector<KeyPoint> &keypoints_1,
+                          vector<KeyPoint> &keypoints_2,
+                          vector<DMatch> &matches,
                           Mat &R, Mat &t){
     Mat K = (Mat_<double>(3,3) << 520.9, 9, 325.1, 0, 521.0, 249.7, 0, 0, 1);
 
@@ -114,7 +114,7 @@ void pose_estimation_2d2d(vector<KeyPoint> keypoints_1,
 
     for(int i=0; i< (int)matches.size(); i++){
         points1.push_back(keypoints_1[matches[i].queryIdx].pt);
-        points2.push_back(keypoints_2[matches[i].queryIdx].pt);
+        points2.push_back(keypoints_2[matches[i].trainIdx].pt);
     }
 
     Mat fundamental_matrix;
