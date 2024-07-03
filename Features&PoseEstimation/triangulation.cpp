@@ -76,9 +76,9 @@ int main(int argc, char **argv){
         float depth2 = pt2_trans.at<double>(2, 0);
         circle(img2_plot, keypoints_2[matches[i].trainIdx].pt, 2, get_color(depth2), 2);
     }
-  cv::imshow("img 1", img1_plot);
-  cv::imshow("img 2", img2_plot);
-  cv::waitKey();
+    cv::imshow("img 1", img1_plot);
+    cv::imshow("img 2", img2_plot);
+    cv::waitKey();
     
     return 0;
 }
