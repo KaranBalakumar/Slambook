@@ -1,8 +1,8 @@
 #ifndef LIBHELLOSLAM_H_
 #define LIBHELLOSLAM_H_
-// 上面的宏定义是为了防止重复引用这个头文件而引起的重定义错误
+// The above macro definition is to prevent redefinition errors caused by repeated inclusion of this header file
 
-// 打印一句hello的函数
+// Function to print "hello"
 void printHello();
 
 #endif
