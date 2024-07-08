@@ -23,6 +23,10 @@ find_package(Sophus REQUIRED)
 find_package(fmt)
 
 include_directories(${G2O_INCLUDE_DIRS})
+include_directories("/usr/include/eigen3")
 
 add_executable(pose_estimation_3d2d pose_estimation_3d2d)
 target_link_libraries(pose_estimation_3d2d ${G2O_CORE_LIBRARY} ${G2O_STUFF_LIBRARY} ${OpenCV_LIBS} Sophus::Sophus fmt::fmt)
+
+add_executable(pose_estimation_3d3d pose_estimation_3d3d)
+target_link_libraries(pose_estimation_3d3d ${G2O_CORE_LIBRARY} ${G2O_STUFF_LIBRARY} ${OpenCV_LIBS} Sophus::Sophus fmt::fmt)
