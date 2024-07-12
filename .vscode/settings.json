@@ -77,4 +77,5 @@
         "valarray": "cpp",
         "variant": "cpp"
     },
+    "ros.distro": "humble",
 }
