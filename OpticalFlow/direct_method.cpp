@@ -1,7 +1,6 @@
 #include <opencv4/opencv2/opencv.hpp>
 #include <sophus/se3.hpp>
 #include <boost/format.hpp>
-#include <pangolin/pangolin.h>
 
 using namespace std;
 

@@ -11,11 +11,10 @@ include_directories(
         ${G2O_INCLUDE_DIRS}
         ${Sophus_INCLUDE_DIRS}
         "/usr/include/eigen3/"
-        ${Pangolin_INCLUDE_DIRS}
 )
 
 add_executable(optical_flow optical_flow.cpp)
 target_link_libraries(optical_flow ${OpenCV_LIBS})
 
 add_executable(direct_method direct_method.cpp)
-target_link_libraries(direct_method ${OpenCV_LIBS} ${Pangolin_LIBRARIES})
+target_link_libraries(direct_method ${OpenCV_LIBS})
