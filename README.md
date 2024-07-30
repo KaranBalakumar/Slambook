@@ -30,3 +30,6 @@ This repository contains basics and implementations required for Visual Odometry
 ## Bundle Adjustment
 - Implementing bundle adjustment using ```Ceres``` and ```g2o``` in the BAL dataset.
 - Refer to ```BundleAdjustment``` folder
+## Loop Closure
+- Using Bag of Words, to describe an image by clustering feature points. ```DBoW3``` library example using TUM dataset images.
+- Refer to ```LoopClosure``` folder  
