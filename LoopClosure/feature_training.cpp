@@ -15,7 +15,7 @@ int main( int argc, char** argv ) {
     vector<Mat> images; 
     for ( int i=0; i<10; i++ )
     {
-        string path = "/home/karan/slambook2/ch11/data/"+to_string(i+1)+".png";
+        string path = "/home/karan/slambook/LoopClosure/data/"+to_string(i+1)+".png";
         images.push_back( imread(path) );
     }
     // detect ORB features
