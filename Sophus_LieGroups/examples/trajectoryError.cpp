@@ -8,13 +8,13 @@ using namespace std;
 
 typedef vector<Sophus::SE3d, Eigen::aligned_allocator<Eigen::Isometry3d>> Trajectorytype;
 
-string groundtruth_file = "/home/karan/slambook/Sophus_LieGroups/examples/groundtruth.txt";
-string estimated_file = "/home/karan/slambook/Sophus_LieGroups/examples/estimated.txt";
+string groundtruth_file = "/home/karan/Slambook/Sophus_LieGroups/examples/groundtruth.txt";
+string estimated_file = "/home/karan/Slambook/Sophus_LieGroups/examples/estimated.txt";
 
 void DrawTrajectory(const Trajectorytype &gt, const Trajectorytype &et);
 Trajectorytype ReadTrajectory(const string &path);
 
-int main(char argc, char **argv){
+int main(int argc, char **argv){
     Trajectorytype gt = ReadTrajectory(groundtruth_file);
     Trajectorytype et = ReadTrajectory(estimated_file);
     assert(!gt.empty() && !et.empty());
