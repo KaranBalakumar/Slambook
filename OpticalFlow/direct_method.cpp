@@ -11,9 +11,9 @@ double fx = 718.856, fy = 718.856, cx = 607.1928, cy = 185.2157;
 // baseline
 double baseline = 0.573;
 // paths
-string left_file = "/home/karan/slambook/OpticalFlow/left.png";
-string disparity_file = "/home/karan/slambook/OpticalFlow/disparity.png";
-boost::format fmt_others("/home/karan/slambook/OpticalFlow/%06d.png");    // other files
+string left_file = "/home/karan/Slambook/OpticalFlow/left.png";
+string disparity_file = "/home/karan/Slambook/OpticalFlow/disparity.png";
+boost::format fmt_others("/home/karan/Slambook/OpticalFlow/%06d.png");    // other files
 
 // useful typedefs
 typedef Eigen::Matrix<double, 6, 6> Matrix6d;

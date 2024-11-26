@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include/eigen3",
-                "/usr/include/opencv4",
+                "/usr/local/include/opencv4",
                 "${workspaceFolder}/BundleAdjustment"
             ],
             "defines": [],

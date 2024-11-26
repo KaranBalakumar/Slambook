@@ -1,6 +1,5 @@
 include_directories("/usr/include/eigen3")
 
-list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 find_package(OpenCV REQUIRED)
 find_package(Ceres REQUIRED)

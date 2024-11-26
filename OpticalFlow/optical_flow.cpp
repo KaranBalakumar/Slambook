@@ -7,8 +7,8 @@
 using namespace std;
 using namespace cv;
 
-string file_1 = "/home/karan/slambook/OpticalFlow/LK1.png";  // first image
-string file_2 = "/home/karan/slambook/OpticalFlow/LK2.png";  // second image
+string file_1 = "/home/karan/Slambook/OpticalFlow/LK1.png";  // first image
+string file_2 = "/home/karan/Slambook/OpticalFlow/LK2.png";  // second image
 
 /// Optical flow tracker and interface
 class OpticalFlowTracker {
