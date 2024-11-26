@@ -10,8 +10,8 @@ using namespace Eigen;
 
 void showPointCloud(vector<Vector4d, Eigen::aligned_allocator<Vector4d>> &pointcloud);
 
-string left_image = "/home/karan/slambook/OpenCVand3DVision/stereoVision/left.png";
-string right_image = "/home/karan/slambook/OpenCVand3DVision/stereoVision/right.png";
+string left_image = "/home/karan/Slambook/OpenCVand3DVision/stereoVision/left.png";
+string right_image = "/home/karan/Slambook/OpenCVand3DVision/stereoVision/right.png";
 
 int main(int argc, char **argv){
     //intrinsics

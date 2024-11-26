@@ -17,14 +17,14 @@ int main(int argc, char **argv) {
     vector<cv::Mat> colorImgs, depthImgs;    // Color image and depth image.
     TrajectoryType poses;         // Camera Poses
 
-    ifstream fin("/home/karan/slambook2/ch5/rgbd/pose.txt");
+    ifstream fin("/home/karan/Slambook/OpenCVand3DVision/rgbd/pose.txt");
     if (!fin) {
         cerr << "pose.txt not found" << endl;
         return 1;
     }
 
     for (int i = 0; i < 5; i++) {
-        boost::format fmt("/home/karan/slambook2/ch5/rgbd/%s/%d.%s"); //Image file's name format
+        boost::format fmt("/home/karan/Slambook/OpenCVand3DVision/rgbd/%s/%d.%s"); //Image file's name format
         colorImgs.push_back(cv::imread((fmt % "color" % (i + 1) % "png").str()));
         // use -1 floag to load the depth image
         depthImgs.push_back(cv::imread((fmt % "depth" % (i + 1) % "pgm").str(), -1)); 

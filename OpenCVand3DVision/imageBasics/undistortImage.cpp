@@ -3,7 +3,7 @@
 
 using namespace std;
 
-string image_file = "/home/karan/slambook/OpenCVand3DVision/imageBasics/distorted.png";
+string image_file = "/home/karan/Slambook/OpenCVand3DVision/imageBasics/distorted.png";
 
 int main(int argc, char **argv){
     // in this program we will implement the undistortion by ourselves rather than OpenCV
