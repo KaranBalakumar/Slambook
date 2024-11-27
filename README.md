@@ -1,5 +1,18 @@
 # Visual Odometry and VisualSLAM basics in C++
-This repository contains basics and implementations required for Visual Odometry and VisualSLAM. This repository contains,
+This repository contains basics and implementations required for Visual Odometry and VisualSLAM.
+
+## Dependencies
+1. CMake
+2. Pangolin <https://github.com/stevenlovegrove/Pangolin>
+3. Eigen3
+4. Sophus <https://github.com/strasdat/Sophus.git>
+5. Opencv4
+6. boost
+7. g2o <https://github.com/RainerKuemmerle/g2o>
+8. Ceres <https://github.com/ceres-solver/ceres-solver.git>
+9. DBoW3 <https://github.com/rmsalinas/DBow3.git> 
+10. Meshlab (for visualizing ply file) 
+
 ## CPP and Cmake
 - Very Basic C++ and CMake examples.
 - Refer to ```CPPandCmake```
